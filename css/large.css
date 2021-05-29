@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    max-width: 960px;
+    margin:auto;
+    
+    font-family: 'Lato', sans-serif;
+}
+
+#title-panel {
+    background-color: rgb(220, 220, 220);
+
+    margin-top: 20vh;
+    padding: .5em 1em .5em 1em;
+
+    font-size: 28px;
+    
+    color: rgb(60, 60, 60);
+
+    border-radius: 15px;
+}
+
+#title-panel aside {
+    padding: 1em 0 0 1em;
+    float: right;
+    max-width: 40%;
+}
+
+#title-panel footer {
+    font: 16px 'Lato';
+}
+
+#title-panel a {
+    font-style: italic;
+    color:black;
+}
+
+#main-footer {
+    margin: 20vh 0 2em 0;
+    padding: 1em 1em 1em 0;
+    width: 100%;
+    background-color: rgb(220, 220, 220);
+
+    text-align: center;
+}
+
+#main-footer ul li {
+    display:inline-block;
+    text-transform: uppercase;
+}
+
+#main-footer ul li:after {
+    text-align: center;
+    content: "-";
+    display:inline-block;
+    width: 50px;
+}
+
+#main-footer ul li:last-child::after {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 72, 100);
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+#intro {
+    align-self: center;
+}
+
+.drop-shadow {
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 5px;
+}
+
+.aside-wrapper {
+    display: flex;
+    flex-direction:row-reverse;
+}
+
+.description-section {
+    margin: 20vh auto 20vh auto;
+    max-width: 80%;
+    display:flex;
+    flex-direction: row;
+    column-count: 2;
+}
+
+.description-section h1 {
+    float:left;
+    min-width: 30%;
+
+    color: cyan;
+
+    text-align: right;
+}
+
+.description-section h1:after {
+    content: "-";
+    text-align: center;
+    float:right;
+    
+    min-width: 80px;
+}
+
+.description-section ul li {
+    list-style: none;
+}
+
+.description-section ul li:before {
+    content: "\2022";
+    color:cyan;
+    display:inline-block;
+
+    width: 1.5em;
+    margin-left: -1em;
+    
+    color: cyan;
+}
+
+.description-section #skills thead {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.project-showcase {
+    margin: 0 50px 2em 50px;
+}
+
+.project-showcase aside {
+    float:right;
+    width: 220px;
+    height: 400px;
+
+    padding: 0 1em 0 1em;
+
+    background-color: rgb(200, 255, 255);
+
+    border-radius: 0 15px 0 0;
+}
+
+.slideshow {
+    width: 600px;
+    height: 400px;
+
+    background-color: rgb(0, 18, 25);
+    color:whitesmoke;
+}
+
+.slideshow .slideshow-pause {
+    display:none;
+    position: absolute;
+}
+
+.slideshow .slideshow-item {
+    display: none;
+    height: 100%;
+    max-width: 100%;
+
+    overflow:hidden;
+
+    padding-left: 1em;
+}
+
+.slideshow .slideshow-item-centered {
+    display: none;
+    height: 100%;
+
+    text-align: center;
+    
+    overflow:hidden;
+}
+
+.slideshow-item .high-concept {
+    margin-top: 30%;
+    font-style: italic;
+}
