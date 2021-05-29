@@ -160,21 +160,19 @@ a:hover {
 
 .slideshow .slideshow-item {
     display: none;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
+    
+    object-fit: contain;
 
     overflow:hidden;
-
-    padding-left: 1em;
 }
 
-.slideshow .slideshow-item-centered {
-    display: none;
-    height: 100%;
-
-    text-align: center;
+.slideshow-item img, video {
+    width: 600px;
+    height: 400px;
     
-    overflow:hidden;
+    object-fit: contain;
 }
 
 .slideshow-item .high-concept {
