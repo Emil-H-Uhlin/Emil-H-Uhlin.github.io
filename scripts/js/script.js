@@ -8,8 +8,9 @@ $(document).ready(() => {
     slideshows = document.getElementsByClassName("slideshow")                                       // find all slideshows
 
     for (let i = 0; i < slideshows.length; i++) {
-        let children = slideshows[i].querySelectorAll('.slideshow-item,.slideshow-item-centered')   // get slideshow-item children
-        children[0].style.display = "block";                                                        // make the first one visible immediately
+        let children = slideshows[i].querySelectorAll('.slideshow-item')   // get slideshow-item children
+        children[0].style.display = "block";      
+                                                          // make the first one visible immediately
 
         setTimeout(() => {                                                                  // delayed starts of slideshows
             pauseButtons.push(slideshows[i].getElementsByClassName("slideshow-pause")[0])   // add slideshow pause icon
@@ -17,12 +18,20 @@ $(document).ready(() => {
     
             slideshows[i].onmouseenter = function() {       // mouse entering slideshow pauses and displays corresponding pause icon
                 clearInterval(slideshowIntervals[i])        // stop slideshow
-                pauseButtons[i].style.display = "block"     // show pause icon
+                
+                let pause = pauseButtons[i]
+                
+                if (pause != null) 
+                    pause.style.display = "block"           // show pause icon
             }
     
             slideshows[i].onmouseleave = function() {       // mouse leaving slideshow restarts slideshows and hides pause icon
                 slideshowIntervals[i] = startSlideshow(i)   // start slideshow
-                pauseButtons[i].style.display = "none"      // hide pause icon
+
+                let pause = pauseButtons[i]
+                
+                if (pause != null) 
+                    pause.style.display = "none"            // hide pause icon
             }
     
             slideshowIntervals.push(startSlideshow(i))      // start initial slideshow

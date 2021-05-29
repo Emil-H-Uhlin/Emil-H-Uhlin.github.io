@@ -4,7 +4,7 @@ body {
     max-width: 960px;
     margin:auto;
     
-    font-family: 'Lato', sans-serif;
+    font: 16px 'Lato', sans-serif;
 }
 
 #title-panel {
@@ -143,6 +143,11 @@ a:hover {
     background-color: rgb(200, 255, 255);
 
     border-radius: 0 15px 0 0;
+}
+
+.project-showcase aside footer {
+    text-align: right;
+    margin-top: auto;
 }
 
 .slideshow {
