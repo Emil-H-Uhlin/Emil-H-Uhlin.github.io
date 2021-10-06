@@ -39,14 +39,14 @@ $(document).ready(() => {
         }, .3 * MILLIS_IN_SECOND * i);                      // increasing delayed start for each slideshow (.3 seconds for each child [0, .3, .6, .9, ...])
     }
 
-    let rounded = document.getElementsByClassName("rounded")    // find all items that are to be rounded
+    let rounded = document.getElementsByClassName("rounded")// find all items that are to be rounded
     
     for (let i = 0; i < rounded.length; i++) {
         let element = rounded[i]
 
         let maxRadius = Math.max(element.offsetWidth, element.offsetHeight) // find largest dimension
 
-        element.style.borderRadius = maxRadius + 'px'                       // set border radius to largest dimension to get round item
+        element.style.borderRadius = '1000px'              	// set border radius to largest dimension to get round item
     }
 });
 
