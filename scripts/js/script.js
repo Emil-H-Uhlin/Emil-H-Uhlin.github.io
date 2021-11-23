@@ -44,9 +44,7 @@ $(document).ready(() => {
     for (let i = 0; i < rounded.length; i++) {
         let element = rounded[i]
 
-        let maxRadius = Math.max(element.offsetWidth, element.offsetHeight) // find largest dimension
-
-        element.style.borderRadius = '1000px'              	// set border radius to largest dimension to get round item
+        element.style.borderRadius = '1000px'
     }
 });
 
